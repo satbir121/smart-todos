@@ -52,7 +52,8 @@ function TodoList() {
   dayBeforeYes.setDate(today.getDate() - 2);
   dayBeforedayBeforeYes.setDate(today.getDate() - 3);
   const storedItems =
-    localStorage.getItem("items") === "null"
+    localStorage.getItem("items") === "null" ||
+    localStorage.getItem("items") === null
       ? []
       : JSON.parse(localStorage.getItem("items"));
 
